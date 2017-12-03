@@ -7,6 +7,8 @@
     <link rel="stylesheet" href="../css/about.css">
     <link rel="stylesheet" href="../css/career.css">
     <link rel="stylesheet" href="../css/portfolio.css">
+    <link rel="stylesheet" href="../css/font-awesome.min.css">
+    <link rel="stylesheet" href="../css/fonts.css">
     <title>My portfolio</title>
   </head>
   <body>
@@ -14,15 +16,25 @@
       <header class="header">
         <div class="wrapper">
           <div class="header__avatar-block">
-            <div class="header__ava"><img src="../../images/heygirl.png" alt="hey" class="image__width"></div><span class="header__name">Анатолий Анатольев</span>
+            <div class="header__ava"><img src="../../images/heygirl.png" alt="hey" title="Hey Girl!" class="image__width"></div><span class="header__name">Анатолий Анатольев</span>
           </div>
-          <div class="header__contacts-block"><span class="header__contacts">Мои контакты</span></div>
+          <div class="header__contacts-block">
+            <p class="header__contacts">Мои контакты</p>
+            <p class="dots">........................</p>
+          </div>
         </div>
       </header>
+      <!--each link in links    //li.navigation__item   //a(href="#{link.url}")#{link.name}-->
       <main class="main">
         <div class="wrapper">
           <nav class="navigation">
-            <div class="list"><a>hi</a><a>hi</a><a>hi</a><a>hi</a><a>hi</a></div>
+            <div class="navigation__block">  
+              <ul class="navigation__list">
+                <li class="navigation__item"><a href="../pages/about.html"> <i class="fa fa-user-secret icon-margin">Обо мне</i></a></li>
+                <li class="navigation__item"><a href="../pages/career.html"> <i class="fa fa-rocket icon-margin">Карьерный путь</i></a></li>
+                <li class="navigation__item"><a href="../pages/portfolio.html"> <i class="fa fa-briefcase icon-margin">Портфолио</i></a></li>
+              </ul>
+            </div>
           </nav>
           <section class="main__content"></section>
         </div>

@@ -1,12 +1,20 @@
+- var links = [{name:"Обо мне", url:"../pages/about.html"}, {name:"Карьерный путь", url: "../pages/career.html"}, {name:"Портфолио", url:"../pages/portfolio.html"}];
+//each link in links    //li.navigation__item   //a(href="#{link.url}")#{link.name}
+
 main.main
   .wrapper
     nav.navigation
-      .list
-        a hi
-        a hi
-        a hi
-        a hi
-        a hi
+      .navigation__block   
+        ul.navigation__list
+          li.navigation__item
+            a(href='../pages/about.html') 
+              i.fa.fa-user-secret.icon-margin Обо мне
+          li.navigation__item
+            a(href='../pages/career.html') 
+              i.fa.fa-rocket.icon-margin Карьерный путь
+          li.navigation__item
+            a(href='../pages/portfolio.html') 
+              i.fa.fa-briefcase.icon-margin Портфолио
     section.main__content
       block content
         

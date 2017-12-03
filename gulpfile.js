@@ -2,6 +2,7 @@ var gulp = require('gulp'), // Сообственно Gulp JS
     // csso = require('gulp-csso'), // Минификация CSS
     sass = require('gulp-sass'), // Конверстация SASS (SCSS) в CSS
     prettify = require('gulp-prettify'),
+    clean = require('gulp-clean'),
     jade = require('gulp-jade'); // Конвертация JADE В html
 
     // Компилируем Jade в html
@@ -21,11 +22,8 @@ gulp.task('sass', function () {
 		.pipe(gulp.dest('dist/css/')); // результат пишем по указанному адресу
 });
 
-
-// Задача "watch". Запускается командой "gulp watch"
-// Она следит за изменениями файлов и автоматически запускает другие задачи
 gulp.task('watch', function () {
 	// При изменение файлов *.scss в папке "styles" и подпапках запускаем задачу sass
 	gulp.watch('app/styles/**/*.scss', ['sass']);
-  gulp.watch('app/pages/**/*.jade', ['jade']);
+  gulp.watch('app/jade/**/*.jade', ['jade']);
 });

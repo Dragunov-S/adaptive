@@ -1,0 +1,46 @@
+.wrapper {
+  background-color: rgb(246, 246, 246);
+  height: 100vh;
+  width: 100vw;
+}
+/*@media screen and (max-height: 600px) and (max-width: 600px) {
+     .hello-box-top { background-color: #fc0; }
+     .hello-box-top {
+     height: 300px;
+   width: 300px;}
+   }
+   */
+.to-the-flexbox {
+  display: -webkit-flex;
+  display: flex;
+}
+
+.x_axis {
+  -webkit-justify-content: center;
+  justify-content: center;
+}
+
+.y_axis {
+  -webkit-align-items: center;
+  align-items: center;
+}
+
+.to-column {
+  -webkit-flex-direction: column;
+  flex-direction: column;
+}
+
+.to-grow {
+  -webkit-flex-grow: 1;
+  flex-grow: 1;
+}
+
+.to-wrap {
+  -webkit-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+
+.from_end {
+  -webkit-justify-content: flex-end;
+  justify-content: flex-end;
+}

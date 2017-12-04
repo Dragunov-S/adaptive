@@ -1,0 +1,67 @@
+body {
+  margin: 0;
+}
+
+/*Верхняя часть с аватаркой и именем*/
+.hello-box-top {
+  background: rgb(255, 255, 255);
+  border-radius: 1.5vh 1.5vh 0 0;
+  box-shadow: 0px 0.1vh 0.2vh 0px rgba(0, 0, 0, 0.3);
+  width: 22.5vmax;
+  height: 11.6vmax;
+}
+
+/*Нижняя часть с кнопкой*/
+.hello-box-bottom {
+  background: #33c1e3;
+  border-radius: 0 0 1.5vh 1.5vh;
+  box-shadow: 0px 0.1vh 0.2vh 0px rgba(0, 0, 0, 0.3);
+  width: 22.5vmax;
+  height: 5.9vmax;
+}
+/*Настройка шрифта имени в верхнем блоке*/
+.hello-font {
+  font-size: 1.65vmax;
+  font-family: "Open Sans Regular";
+  color: rgb(65, 65, 65);
+  line-height: 0.2vmax;
+  text-shadow: 0.05vmax 0.05vmax 0.05vmax rgba(0, 0, 0, 0.3);
+  margin: 1.9vmax 0 0 0;
+}
+/*Настройка аватара*/
+.avatar {
+  border-width: 0.08vmax;
+  border-color: rgb(215, 215, 215);
+  border-style: solid;
+  border-style: solid;
+  border-width: 0.08vmax;
+  border-color: rgb(190, 190, 190);
+  border-radius: 50%;
+  background-color: rgb(246, 246, 246);
+  height: 10.5vmax;
+  width: 10.5vmax;
+  margin: -5.3vmax 0 0 0;
+  z-index: 1;
+}
+/*Стилизация кнопки*/
+.hello-button {
+  text-decoration: none;
+  outline: none;
+  text-align: center;
+  font-size: 1.05vmax;
+  font-family: "Fira Sans Bold";
+  color: rgb(255, 255, 255);
+  line-height: 2.7vmax;
+  height: 2.6vmax;
+  width: 10vmax;
+  display: inline-block;
+  border-radius: 2vmax;
+  border-width: 0.18vmax;
+  border-color: rgb(255, 255, 255);
+  border-style: solid;
+}
+.hello-button:hover {
+  background: rgb(255, 255, 255);
+  color: #33c1e3;
+  border-color: #33c1e3;
+}

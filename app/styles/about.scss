@@ -8,16 +8,22 @@ $textcolor: rgb(120, 120, 120);
 $desktopbreak: 1200px;
 $tabletbreak: 768px;
 $mobilebreak: 480px;
+$wrapperwidth: 1150px;
 
 $headeravatar: 55px;
 $headerheight: 80px;
 $footerheight: 50px;
 $navwidth: 275px;
-$mainimage: 230px;
+$mainimage: 220px;
+$paddingtop: 30px;
+$paddingright: 65px;
+$headlinefontsize: 35px;
+$socialbutton: 35px;
 
 html {
   width: 100%;
   height: 100%;
+  background: $maincolor;
 }
 body {
   margin: 0;
@@ -27,7 +33,6 @@ body {
 .container {
   width: 100%;
   height: 100%;
-  background-color: $maincolor;
   display: flex;
   flex-direction: column;
 }
@@ -42,7 +47,11 @@ body {
 }
 .wrapper {
   display: flex;
-  width: $desktopbreak;
+  width: $wrapperwidth;
+}
+.nav__wrapper {
+  display: flex;
+  width: $wrapperwidth;
 }
 .header__avatar-block {
   display: flex;
@@ -97,17 +106,15 @@ body {
   justify-content: center;
   flex-grow: 1;
   width: 100%;
+  min-height: 450px;
 }
 .navigation {
   min-width: $navwidth;
+  min-height: 50px;
 }
-//.navigation__block {
-//  display: flex;
-//  flex-direction: column;
-//}
 .navigation__list {
   margin: 0;
-  padding: 40px 30px;
+  padding: $paddingtop 30px;
   display: flex;
   flex-direction: column;
   align-items: flex-end;
@@ -120,16 +127,19 @@ body {
 .navigation__list li a {
   line-height: 10px;
   font-size: 20px;
-  color: $linkcolor;
+  color: $footercolor;
   text-decoration: none;
   outline: none;
+}
+.navigation__list li:hover>a {
+  color: $linkcolor;
 }
 .main__aboutme {
   display: flex;
   width: 100%;
 }
 .main__imagewrap {
-  padding: 40px 20px;
+  padding: $paddingtop $paddingright;
 }
 .main__aboutme-image {
   width: $mainimage;
@@ -142,14 +152,18 @@ body {
   flex-grow: 1;
 }
 .main__article-wrap {
-  padding: 40px 0px;
+  padding: $paddingtop 0px;
   width: 100%;
 }
 .main__headline {
-  margin: 0;
+  font-size: $headlinefontsize;
+  font-weight: 500;
+  font-family: "Fira Sans Medium";
+  margin: 0 0 20px 0;
 }
 .main__aboutme-text {
-  height: 500px;
+  height: 68%;
+  min-width: $mobilebreak;
   overflow-y: scroll;
 }
 .main__text {
@@ -177,7 +191,7 @@ body {
   flex-grow: 1;
 }
 .main__button {
-  padding: 20px 10px 0 0;
+  padding: 25px 10px 0 0;
   display: flex;
   justify-content: flex-end;
 }
@@ -204,6 +218,51 @@ body {
 }
 .icon-margin::before {
   margin-right: 10px;
+}
+.footer__social-list {
+  padding: 0;
+  margin: 0;
+  height: 100%;
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center; 
+}
+.footer__social-list li {
+  display: inline-block; 
+}
+.footer__button {
+  display: block;
+  padding-right: 8px;
+  height: $socialbutton;
+  width: $socialbutton;
+  text-decoration: none;
+  outline: none;
+}
+.footer__button--fb {
+  background: url(../../images/fb.png) no-repeat;
+  background-size: contain;
+}
+.footer__button--fb:hover {
+  background: url(../../images/fb1.png) no-repeat;
+  background-size: contain;
+}
+.footer__button--vk {
+  background: url(../../images/vk.png) no-repeat;
+  background-size: contain;
+}
+.footer__button--vk:hover {
+  background: url(../../images/vk1.png) no-repeat;
+  background-size: contain;
+}
+.footer__button--tw {
+  background: url(../../images/tw.png) no-repeat;
+  background-size: contain;
+}
+.footer__button--tw:hover {
+  background: url(../../images/tw1.png) no-repeat;
+  background-size: contain;
 }
 #scroll__style::-webkit-scrollbar-track
 {
